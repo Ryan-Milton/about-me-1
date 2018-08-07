@@ -1,0 +1,23 @@
+body {
+    background-image: url("../img/sgn.JPG");
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
+    font-style: italic;
+    color: blueviolet;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
