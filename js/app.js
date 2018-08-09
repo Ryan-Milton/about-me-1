@@ -20,67 +20,81 @@ var name = prompt('What\'s your name?');
 alert('Hi ' + name + '! Would You Like to Test Your Knowledge About ? Please Answer the Following Questions in a Yes/No Format');
 console.log('User Name: ' + name);
 
-var answerOne = prompt('I was born in Seattle?').toLowerCase();
-console.log('User Answer #1 - Seattle: ' + answerOne);
+function bornSeattle() {
+    var answerOne = prompt('I was born in Seattle?').toLowerCase();
+    console.log('User Answer #1 - Seattle: ' + answerOne);
 
-if (answerOne == answerN || answerOne == answerNo) {
-    alert('You answered NO to the first question.' + trueStatement);
-    count++;
-} else if (answerOne == answerY || answerOne == answerYes) {
-    alert('You answered YES to the first question.' + falseStatement);
-} else {
-    alert(otherStatement);
+    if (answerOne == answerN || answerOne == answerNo) {
+        alert('You answered NO to the first question.' + trueStatement);
+        count++;
+    } else if (answerOne == answerY || answerOne == answerYes) {
+        alert('You answered YES to the first question.' + falseStatement);
+    } else {
+        alert(otherStatement);
+    }
 }
 
-var answerTwo = prompt('I served in the Navy for five years?').toLowerCase();
-console.log('User Answer #2 - Navy: ' + answerTwo);
+function militaryService() {
+    var answerTwo = prompt('I served in the Navy for five years?').toLowerCase();
+    console.log('User Answer #2 - Navy: ' + answerTwo);
 
-if (answerTwo == answerN || answerTwo == answerNo) {
-    alert('You answered NO to the second question.' + trueStatement);
-    count++;
-} else if (answerTwo == answerY || answerTwo == answerYes) {
-    alert('You answered YES to the second question.' + falseStatement);
-} else {
-    alert(otherStatement);
+    if (answerTwo == answerN || answerTwo == answerNo) {
+        alert('You answered NO to the second question.' + trueStatement);
+        count++;
+    } else if (answerTwo == answerY || answerTwo == answerYes) {
+        alert('You answered YES to the second question.' + falseStatement);
+    } else {
+        alert(otherStatement);
+    }
 }
 
-var answerThree = prompt('I lived in San Diego for two years?').toLowerCase();
-console.log('User Answer #3 - San Diego: ' + answerThree);
+function sanDiego() {
+    var answerThree = prompt('I lived in San Diego for two years?').toLowerCase();
+    console.log('User Answer #3 - San Diego: ' + answerThree);
 
-if (answerThree == answerN || answerThree == answerNo) {
-    alert('You answered NO to the third question.' + falseStatement);
-} else if (answerThree == answerY || answerThree == answerYes) {
-    alert('You answered YES to the third question.' + trueStatement);
-    count++;
-} else {
-    alert(otherStatement);
+    if (answerThree == answerN || answerThree == answerNo) {
+        alert('You answered NO to the third question.' + falseStatement);
+    } else if (answerThree == answerY || answerThree == answerYes) {
+        alert('You answered YES to the third question.' + trueStatement);
+        count++;
+    } else {
+        alert(otherStatement);
+    }
 }
 
-var answerFour = prompt('I have a degree in Bio Engineering?').toLowerCase();
-console.log('User Answer #4 - Bio Engineering: ' + answerFour);
+function edLevel() {
+    var answerFour = prompt('I have a degree in Bio Engineering?').toLowerCase();
+    console.log('User Answer #4 - Bio Engineering: ' + answerFour);
 
-if (answerFour == answerN || answerFour == answerNo) {
-    alert('You answered NO to the fourth question.' + trueStatement);
-    count++;
-} else if (answerFour == answerY || answerFour == answerYes) {
-    alert('You answered YES to the fourth question.' + falseStatement);
-} else {
-    alert(otherStatement);
+    if (answerFour == answerN || answerFour == answerNo) {
+        alert('You answered NO to the fourth question.' + trueStatement);
+        count++;
+    } else if (answerFour == answerY || answerFour == answerYes) {
+        alert('You answered YES to the fourth question.' + falseStatement);
+    } else {
+        alert(otherStatement);
+    }
 }
 
-var answerFive = prompt('I am an only child?').toLowerCase();
-console.log('User Answer #5 - Only Child: ' + answerFive);
+function onlyChild() {
+    var answerFive = prompt('I am an only child?').toLowerCase();
+    console.log('User Answer #5 - Only Child: ' + answerFive);
 
-if (answerFive == answerN || answerFive == answerNo) {
-    alert('You answered NO to the fifth question.' + falseStatement);
-} else if (answerFive == answerY || answerFive == answerYes) {
-    alert('You answered YES to the fifth question.' + trueStatement);
-    count++;
-} else {
-    alert(otherStatement);
+    if (answerFive == answerN || answerFive == answerNo) {
+        alert('You answered NO to the fifth question.' + falseStatement);
+    } else if (answerFive == answerY || answerFive == answerYes) {
+        alert('You answered YES to the fifth question.' + trueStatement);
+        count++;
+    } else {
+        alert(otherStatement);
+    }
 }
 
-alert('You scored ' + (count * 100) / 5 + ' percent');
+bornSeattle();
+militaryService();
+sanDiego();
+edLevel();
+onlyChild();
 
 alert('Now let us play another game.');
 
@@ -89,28 +103,32 @@ console.log('First Number Guess: ' + randomGuess);
 
 var i = 1;
 
+function numberGuessing() {
 while (i < 4) {
-    if(randomNumber === randomGuess) {
-        alert('YES, that is it! You Won!!!');
-        i = 5;
-        gameTwo = 1;
-    } else if(randomNumber > randomGuess) {
-        alert('Hint: The answer is higher.');
-        randomGuess = parseInt(prompt('Guess Again?'),10);
-        i++;
-        console.log('Loop' + i+'Guess: ' + randomGuess);
-    } else if(randomNumber < randomGuess) {
-        alert('Hint: The answer is lower.');
-        randomGuess = parseInt(prompt('Guess Again?'),10);
-        i++;
-        console.log('Loop' + i + 'Guess: ' + randomGuess);
-    } else {
-        alert('That is not even a number. Or...you should not spell it out. We cannot recognize words you know.');
-        randomGuess = parseInt(prompt('Guess Again?'),10);
-        i++;
-        console.log('Loop' + i + 'Guess: ' + randomGuess);
+        if(randomNumber === randomGuess) {
+            alert('YES, that is it! You Won!!!');
+            i = 5;
+            gameTwo = 1;
+        } else if(randomNumber > randomGuess) {
+            alert('Hint: The answer is higher.');
+            randomGuess = parseInt(prompt('Guess Again?'),10);
+            i++;
+            console.log('Loop' + i+'Guess: ' + randomGuess);
+        } else if(randomNumber < randomGuess) {
+            alert('Hint: The answer is lower.');
+            randomGuess = parseInt(prompt('Guess Again?'),10);
+            i++;
+            console.log('Loop' + i + 'Guess: ' + randomGuess);
+        } else {
+            alert('That is not even a number. Or...you should not spell it out. We cannot recognize words you know.');
+            randomGuess = parseInt(prompt('Guess Again?'),10);
+            i++;
+            console.log('Loop' + i + 'Guess: ' + randomGuess);
+        }
     }
 }
+
+numberGuessing();
 
 if (i===4 && randomGuess===randomNumber) {
     alert('You Won on the Last Try!');
