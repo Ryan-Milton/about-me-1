@@ -1,12 +1,14 @@
-body {
+
+body{
     background-image: url("../img/sgn.JPG");
     background-size: cover;
-    text-align: center;
+
 }
 
 h1 {
     font-size: 45px;
     font-weight: bold;
+    margin: 25px;
 }
 h2 {
     font-size: 30px;
@@ -15,9 +17,33 @@ h2 {
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    color: blue;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    outline: 3px;
+    margin: 25px;
+    background: rgba(255,255,255,0.6)
+
+}
+
+lh{
+    font-size: 20px;
+    font-weight: bold;
+}
+ul {
+    list-style-type: circle;
+    margin: 25px;
+    outline: 3px;
+    background: rgba(255,255,255,0.6)
+}
+
+li{
+    margin: 25px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin: 25px;
+    outline: 3px;
+    background: rgba(255,255,255,0.6)
 }
 
