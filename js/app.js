@@ -117,7 +117,7 @@ if (i===4 && randomGuess===randomNumber) {
     gameTwo = 1;
 }
 
-alert('Game Over. If you did not get a Winning Message, that means you lost.');
+alert('Game Over. If you did not get a Winning Message, that means you lost. The answer was ' + randomNumber);
 
 
 var arrayNumber = new Array(10);
@@ -151,7 +151,7 @@ if (j===6 && arrayNumber.indexOf(arrayGuess) !== -1) {
     gameThree = 1;
 } 
 
-alert('Game Over. If you did not get a Winning Message, that means you lost.');
+alert('Game Over. If you did not get a Winning Message, that means you lost. The answer was ' + arrayNumber);
 
 alert('Thanks for making it through all of this ' + name + '. Let us tally up the results...');
 
