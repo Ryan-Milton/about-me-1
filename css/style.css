@@ -10,10 +10,14 @@ h1 {
     font-weight: bold;
     margin: 25px;
 }
+
 h2 {
-    font-size: 30px;
-    font-style: italic;
     color: blueviolet;
+    font-size: 20px;
+    font-weight: bold;
+    outline: 3px;
+    margin: 25px;
+    background: rgba(255,255,255,0.6)
 }
 
 p {
@@ -25,10 +29,6 @@ p {
 
 }
 
-lh{
-    font-size: 20px;
-    font-weight: bold;
-}
 ul {
     list-style-type: circle;
     margin: 25px;
